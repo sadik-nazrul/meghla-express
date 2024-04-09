@@ -217,8 +217,101 @@
             </div>
         </section>
 
-        
+
+        <!-- Full Bus Container -->
+        <section id="ticket" class="grid grid-cols-5 py-10 shadow">
+
+            <!-- Bus Info -->
+            <div class="col-span-3 p-5">
+                <div class="border-b-2 border-dotted border-[#03071220] py-4 mb-3">
+                    <h2 class="text-xl font-semibold">Select Your Seat</h2>
+                </div>
+                <div class="flex justify-between border-b-2 border-dotted border-[#03071220] py-4 px-4">
+                    <h2 class="text-lg text-[#03071250]"><img class="inline-flex pr-2" src="./images/available.svg"
+                            alt="">Available Seat</h2>
+                    <h2 class="text-lg text-[#1DD100]"><img class="inline-flex pr-2" src="./images/selected.svg"
+                            alt="">Selected</h2>
+                </div>
+
+                <!-- Driver -->
+                <div class="flex justify-end py-4 px-4">
+                    <img src="./images/stearing.svg" alt="">
+                </div>
+
+                <!-- Seats for Booking -->
+                <ul id="allSeats" class="grid grid-cols-4 gap-4 px-4">
+                </ul>
+            </div>
+
+
+            <!-- Seat Details and Price -->
+            <div class="col-span-2 border-l-2 border-dotted border-[#03071230] p-5">
+                <div class="border-b-2 border-dotted border-[#03071220] py-4 mb-3">
+                    <h2 class="text-xl font-semibold">Selected Seat</h2>
+                </div>
+
+                <div class="bg-[#F7F8F8] p-5 rounded-lg">
+                    <div class="flex justify-between border-b-2 border-dotted border-[#03071220] py-4 px-4">
+                        <h2 class="text-lg font-semibold">Seat</h2>
+                        <h2 class="text-lg font-semibold">Class</h2>
+                        <h2 class="text-lg font-semibold">Price</h2>
+                    </div>
+                    <div class="flex justify-between border-b-2 border-solid border-[#03071220] py-4 px-4">
+                        <ul id="selectedSeats">
+
+                        </ul>
+                    </div>
+                    <div class="flex justify-between py-4 px-4">
+                        <h2 class="text-lg font-semibold">Total Price</h2>
+                        <h2 class="text-lg font-semibold"><span>&#x9F3 </span><span id="totalPrice"></span></h2>
+                    </div>
+
+                    <!-- Coupon -->
+                    <div id="discountContainer" class="hidden">
+                        <div class="flex justify-between py-4 px-4 gap-3">
+                            <h2>Discount Amount</h2>
+                            <h2><span>&#x9F3 </span><span id="discountAmount"></span></h2>
+                        </div>
+                    </div>
+                    <div id="coupon" class="flex justify-between py-4 px-4 gap-3">
+                        <input id="couponField" type="text" placeholder="Type here"
+                            class="py-3 px-4 rounded input-accent w-full" />
+                        <button id="couponApply" class="bg-[#1DD100] py-2 px-6 rounded text-white font-semibold"
+                            disabled="disabled">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Passenger info -->
+                <div class="p-5 flex flex-col gap-5">
+                    <label class="text-lg font-medium" for="passenger-name">Passenger Name*
+                        <input id="passenger-name" type="text" placeholder="Enter your name" required
+                            class="py-3 px-4 border rounded w-full" />
+                    </label>
+
+
+                    <label class="text-lg font-medium" for="passenger-phone">Phone Number*
+                        <input id="passenger-phone" type="tel" placeholder="Enter your phone number" required
+                            class="py-3 px-4 border rounded w-full" />
+                    </label>
+
+
+                    <label class="text-lg font-medium" for="passenger-email">Email ID*
+                        <input id="passenger-email" type="email" placeholder="Enter your email id" required
+                            class="py-3 px-4 border rounded w-full" />
+                    </label>
+
+                    <button
+                        class="bg-[#1DD100] py-3 px-4 text-justify flex justify-center rounded-lg text-white font-semibold"
+                        disabled="disabled">Next</button>
+                </div>
+        </section>
     </main>
+
+
+    <script>
+        let seatCount = document.getElementById('totalSeat');
+        seatCount = 40;
+    </script>
 </body>
 
 </html>
