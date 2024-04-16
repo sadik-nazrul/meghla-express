@@ -28,6 +28,7 @@ couponField.addEventListener('keyup', function () {
                 const afterDisTotal = totalAmount - discountAmount;
                 grandTotal.innerText = afterDisTotal;
                 disAmItem.innerText = discountAmount;
+                discountContainer.classList.remove('hidden');
                 couponField.setAttribute('hidden', true)
                 applyBtn.setAttribute('hidden', true)
             }, { once: true });
@@ -39,6 +40,7 @@ couponField.addEventListener('keyup', function () {
                 const afterDisTotal = totalAmount - discountAmount;
                 grandTotal.innerText = afterDisTotal;
                 disAmItem.innerText = discountAmount;
+                discountContainer.classList.remove('hidden');
                 couponField.setAttribute('hidden', true)
                 applyBtn.setAttribute('hidden', true)
             }, { once: true });
